@@ -70,15 +70,21 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 200.0,
                   padding: const EdgeInsets.fromLTRB(8.0, 8.0, 8.0, 14.0),
                   child: Center(
-                    child: TypewriterAnimatedTextKit(
+                    child: ColorizeAnimatedTextKit(
                       text: [
                         "Welcome to WhatsAppMe",
                         "Thank you for download this app"
                       ],
                       textStyle: TextStyle(
                         fontSize: 24.0,
-                        fontFamily: "Agne",
+                        fontFamily: "Slabo",
                       ),
+                      colors: [
+                        Colors.green,
+                        Colors.teal,
+                        Colors.cyan,
+                        Colors.blue
+                      ],
                     ),
                   ),
                 ),
@@ -94,12 +100,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(4.0),
                         icon: Icon(Icons.phone),
-                        labelText: 'Enter Phone Number',
+                        labelText: 'Masukkan Nomor',
                         helperText: '89933xxxx',
                       ),
                       validator: (val){
                         if(val.isEmpty){
-                          return 'Please enter number';
+                          return 'Mohon Untuk Masukkan Nomor';
+                        } else if(val.substring(0,1) == '0'){
+                          return 'Jangan dimulai dengan angka 0 (nol)';
                         }
                       },
                       maxLength: 12,

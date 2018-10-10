@@ -40,7 +40,7 @@ class AboutPageDesc extends StatelessWidget {
 }
 
 _launchURL() async {
-  const url = 'https://flutter.io';
+  const url = 'https://github.com/do4Mother/whatsappme-flutter';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

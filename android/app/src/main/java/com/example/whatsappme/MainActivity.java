@@ -1,4 +1,4 @@
-package com.example.whatsappme;
+package com.mother.whatsappme;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
